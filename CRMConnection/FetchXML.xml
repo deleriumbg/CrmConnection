@@ -1,0 +1,12 @@
+<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='true'>
+  <entity name='contact'>
+    <attribute name='fullname' />
+    <attribute name='contactid' />
+    <link-entity name='lead' from='new_person' to='contactid' link-type='inner' alias='bl'>
+      <attribute name='new_crmapplicantid' />
+    </link-entity>
+    <link-entity name='account' from='new_person' to='contactid' link-type='inner' alias='bm'>
+      <attribute name='new_userid' />
+    </link-entity>
+  </entity>
+</fetch>
